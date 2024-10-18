@@ -62,8 +62,6 @@ public class HelloController {
 
         // Asignar la lista observable a la tabla
         tablaPersonas.setItems(listaPersonas);
-
-
     }
 
     /**
@@ -89,10 +87,9 @@ public class HelloController {
         mostrarVentanaModal("Modificar Persona", personaSeleccionada);
     }
 
-
     /**
      * Método para eliminar la persona seleccionada en la tabla.
-     * Borra los datos de la persona y limpia los campos de texto.
+     * Borra los datos de la persona y muestra un mensaje de éxito.
      */
     @FXML
     private void eliminarPersona() {
@@ -102,9 +99,9 @@ public class HelloController {
             return;
         }
         listaPersonas.remove(personaSeleccionada);
-
         mostrarAlerta("Éxito", "Persona eliminada correctamente.");
     }
+
     /**
      * Selecciona una persona de la tabla y carga sus datos en los campos de texto.
      */
@@ -155,7 +152,7 @@ public class HelloController {
                 }
             }
         } catch (IOException e) {
-           // e.printStackTrace();
+            // e.printStackTrace();
             mostrarAlerta("Error", "No se pudo abrir la ventana.");
         }
     }

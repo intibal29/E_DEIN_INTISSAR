@@ -70,6 +70,12 @@ public class AgregarPersonaController {
         Stage stage = (Stage) txtNombre.getScene().getWindow();
         stage.close();
     }
+
+    /**
+     * Carga los datos de una persona en los campos de texto de la interfaz.
+     *
+     * @param persona La {@code Persona} cuyos datos se cargarán en los campos de texto.
+     */
     public void cargarDatos(Persona persona) {
         txtNombre.setText(persona.getNombre());
         txtApellidos.setText(persona.getApellidos());
